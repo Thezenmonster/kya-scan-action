@@ -27561,7 +27561,7 @@ const path = __nccwpck_require__(6928);
 
 const KYA_API = 'https://agentscores.xyz/api';
 
-const SEVERITY_ORDER = ['low', 'elevated', 'high', 'critical'];
+const SEVERITY_ORDER = ['low', 'moderate', 'elevated', 'high', 'critical'];
 
 async function scanPackage(name) {
   try {
