@@ -1,0 +1,10 @@
+{
+  "name": "kya-scan-action",
+  "version": "1.0.0",
+  "description": "GitHub Action: Scan MCP package dependencies for security issues via KYA",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "license": "MIT"
+}

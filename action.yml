@@ -1,0 +1,32 @@
+name: 'KYA Scan - MCP Security Check'
+description: 'Scan MCP package dependencies for security issues. Checks the KYA abuse database and runs static analysis.'
+author: 'AgentScore'
+branding:
+  icon: 'shield'
+  color: 'green'
+
+inputs:
+  fail-on:
+    description: 'Minimum severity to fail the check (low, elevated, high, critical)'
+    required: false
+    default: 'elevated'
+  package-json:
+    description: 'Path to package.json (default: ./package.json)'
+    required: false
+    default: './package.json'
+  scan-dev-deps:
+    description: 'Also scan devDependencies (default: false)'
+    required: false
+    default: 'false'
+
+outputs:
+  total-scanned:
+    description: 'Number of packages scanned'
+  issues-found:
+    description: 'Number of issues found'
+  report:
+    description: 'Full scan report as JSON'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
