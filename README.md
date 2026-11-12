@@ -1,5 +1,7 @@
 # KYA Scan - MCP Security Check
 
+> **Service end date: 31 December 2026 (UTC).** The AgentScore API that this Action calls closes at the end of that day. Do not add this Action to new workflows, and remove it from existing ones before then. From 1 January 2027 the API answers every request with HTTP 410. This Action treats a failed lookup as a non-finding, so it will report **"All dependencies passed KYA security checks" without checking anything**. Remove the step from your workflows before the end date.
+
 Scan your MCP package dependencies for security issues on every push and PR. Checks the KYA abuse database and runs static analysis for install scripts, suspicious URLs, and metadata issues.
 
 [![KYA Scan](https://agentscores.xyz/api/scan/badge?npm=mcp-trust-guard)](https://agentscores.xyz)
